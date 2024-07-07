@@ -319,3 +319,9 @@ a > img {
   background-color: var(--sidebar);
   color: var(--sidebar-color);
 }
+
+.button:hover,
+a:hover,
+.nav-item:hover {
+  cursor: pointer;
+}
