@@ -6,24 +6,19 @@ body {
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr min(4fr, 80vh);
 }
 
 .sidebar {
-  background-color: red;
   grid-row: 1 / 3;
 }
 
 .header {
-  background-color: blue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.main {
-  background-color: green;
-}
 .nav > ul {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
@@ -77,28 +72,30 @@ body {
 .main {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.left-main {
+  grid-row: 1 / 3;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.right {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 .announcement-container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
 }
+.announcement {
+  min-width: 235px;
+}
 
 .activity-container {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  align-items: space-around;
+  align-items: center;
 }
 
 .activity {
@@ -109,6 +106,11 @@ body {
 
 .profile-image {
   grid-row: 1 / 3;
+}
+
+.card-links {
+  display: flex;
+  justify-content: flex-end;
 }
 /* temp styles for visualization*/
 img {
