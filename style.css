@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --background: rgb(233, 233, 233);
 }
 
 .comfortaa-font {
@@ -13,11 +14,11 @@
 
 body {
   display: grid;
-  height: 100vh;
+  min-height: 100vh;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: 1fr min(6fr, 80vh);
   font-family: "Comfortaa", sans-serif, Arial, Helvetica;
-  background-color: rgb(233, 233, 233);
+  background-color: var(--background);
 }
 
 .sidebar {
@@ -31,6 +32,7 @@ body {
   justify-content: space-between;
   background-color: white;
   box-shadow: 0 3px 3px gray;
+  margin-bottom: 5px;
 }
 
 .nav > ul {
@@ -54,6 +56,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
+  margin-bottom: 0;
 }
 
 .search {
@@ -71,13 +75,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 10px;
+  margin-top: 0;
 }
 
 .profile2 {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
-  align-items: end;
+  align-items: center;
 }
 
 .large-profile {
@@ -97,7 +103,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  height: calc(100% - 42px);
+  height: calc(100% - 37px);
+  row-gap: 10px;
 }
 
 .announcements {
@@ -125,13 +132,16 @@ body {
   height: auto-fill;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  
+  margin: 5px;
 }
 
 .activity {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .profile-image {
@@ -144,7 +154,7 @@ body {
 
 .card-links {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   right: 5px;
 }
 
@@ -163,6 +173,7 @@ img {
   object-fit: cover;
   height: 65px;
   width: 65px;
+  margin-right: 20px;
 }
 
 .card,
@@ -170,6 +181,7 @@ img {
   background-color: white;
   border-radius: 5px;
   margin: 10px;
+  margin-top: 0;
   padding: 5px;
   box-shadow: 3px 3px 3px gray;
 }
@@ -181,11 +193,111 @@ img {
 .label {
   font-size: 20px;
   padding: 5px;
-  padding-top: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.card-label {
+  font-size: 20px;
+  padding: 5px;
+  padding-top: 10px;
 }
 
 h2 {
   font-size: 16px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+a > img {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.announcement > p {
+  padding: 10px;
+  padding-top: 0;
+}
+
+.nav-item,
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 20px;
+}
+.logo-image {
+  margin: 10px;
+}
+
+.nav-image {
+  height: 30px;
+  width: 30px;
+  margin: 15px;
+}
+
+.search-image, 
+.notification {
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+  margin-right: 25px;
+}
+
+#search {
+  width: 600px;
+  padding: 5px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--background);
+}
+
+#search:focus,
+#search:active {
+  outline: none;
+}
+
+.name {
+  font-weight: 900;
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+.id {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.username,
+.action {
+  margin-left: 10px;
+}
+
+.light-text {
+  color: gray;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
+.card-content {
+  padding: 5px;
+}
+
+.button {
+  font-family: "Comfortaa", sans-serif, Arial, Helvetica;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: lightblue;
 }
