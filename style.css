@@ -286,6 +286,14 @@ a > img {
   margin-left: 10px;
 }
 
+.username {
+  align-self: flex-end;
+  padding-bottom: 2px;
+}
+.action {
+  padding-top: 2px;
+}
+
 .light-text {
   color: gray;
 }
