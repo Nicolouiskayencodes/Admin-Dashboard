@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
   --background: rgb(233, 233, 233);
+  --sidebar: #f43f5e;
+  --sidebar-color: #FFFFF0;
+  --sidebar-filter: invert(94%) sepia(3%) saturate(1267%) hue-rotate(356deg) brightness(104%) contrast(109%);
+  --font: "Comfortaa", sans-serif, Arial, Helvetica;
 }
 
 .comfortaa-font {
@@ -17,20 +21,21 @@ body {
   min-height: 100vh;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: 1fr min(6fr, 80vh);
-  font-family: "Comfortaa", sans-serif, Arial, Helvetica;
+  font-family: var(--font);
   background-color: var(--background);
 }
 
 .sidebar {
   grid-row: 1 / 3;
-  background-color: lightblue;
+  background-color: var(--sidebar);
+  color: var(--sidebar-color) ;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--sidebar-color);
   box-shadow: 0 3px 3px gray;
   margin-bottom: 5px;
 }
@@ -187,7 +192,7 @@ img {
 }
 
 .card {
-  border-left: 10px solid orange;
+  border-left: 10px solid teal;
 }
 
 .label {
@@ -231,13 +236,16 @@ a > img {
 }
 .logo-image {
   margin: 10px;
+  filter: var(--sidebar-filter);
 }
 
 .nav-image {
   height: 30px;
   width: 30px;
   margin: 15px;
+  filter: var(--sidebar-filter);
 }
+
 
 .search-image, 
 .notification {
@@ -254,6 +262,7 @@ a > img {
   border-radius: 20px;
   border: none;
   background-color: var(--background);
+  font-family: var(--font);
 }
 
 #search:focus,
@@ -290,7 +299,7 @@ a > img {
 }
 
 .button {
-  font-family: "Comfortaa", sans-serif, Arial, Helvetica;
+  font-family: var(--font);
   font-size: 14px;
   font-weight: 800;
   padding: 10px;
@@ -299,5 +308,6 @@ a > img {
   border-radius: 20px;
   margin-left: 10px;
   border: none;
-  background-color: lightblue;
+  background-color: var(--sidebar);
+  color: var(--sidebar-color);
 }
