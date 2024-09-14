@@ -38,6 +38,7 @@ body {
   background-color: var(--sidebar-color);
   box-shadow: 0 3px 3px gray;
   margin-bottom: 5px;
+  max-height: 150px;
 }
 
 .nav > ul {
