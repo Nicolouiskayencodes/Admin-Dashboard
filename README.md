@@ -1,4 +1,7 @@
 # Admin-Dashboard
+Live preview: https://nicolouiskayencodes.github.io/Admin-Dashboard/
+
+Using CSS grid and Flex-box to place elements based on a design document.
 
 Comfortaa font downloaded from https://fonts.google.com/specimen/Comfortaa
 
